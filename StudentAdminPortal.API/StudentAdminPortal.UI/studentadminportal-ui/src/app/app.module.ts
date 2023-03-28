@@ -46,13 +46,15 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 // Material Data tables
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort';
+// import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { TopNavComponent } from './layout/top-nav/top-nav.component';
 // Student component
 import { StudentsComponent } from './students/students.component';
 // Http client module for the API use.
 import { HttpClientModule } from '@angular/common/http';
+import { MatSortModule } from '@angular/material/sort';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -62,6 +64,7 @@ import { HttpClientModule } from '@angular/common/http';
     StudentsComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
