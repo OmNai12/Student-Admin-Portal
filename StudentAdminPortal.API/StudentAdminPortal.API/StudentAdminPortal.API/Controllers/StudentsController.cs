@@ -25,7 +25,7 @@ namespace StudentAdminPortal.API.Controllers
 
         [HttpGet]
         [Route("[controller]")]
-        public async Task<IActionResult> GetAllStudents()
+        public async Task<IActionResult> GetAllStudentsAsync()
         {
             // We convert in genral for domain and data model.
             //var students = studentRepository.GetStudents();
@@ -35,5 +35,21 @@ namespace StudentAdminPortal.API.Controllers
             return Ok(mapper.Map<List<Student>>(students));
         }
 
+        // [Route("[controller]/{studentId:guid}"), ActionName("GetStudentAsync")] <----- This was there.
+        [HttpGet]
+        [Route("[controller]/{studentId:guid}")]
+        public async Task<IActionResult> GetStudentAsync([FromRoute] Guid studentId)
+        {
+            // Fetch Student Details
+            var student = await studentRepository.GetStudentAsync(studentId);
+
+            // Return Student
+            if (student == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(mapper.Map<Student>(student));
+        }
     }
 }

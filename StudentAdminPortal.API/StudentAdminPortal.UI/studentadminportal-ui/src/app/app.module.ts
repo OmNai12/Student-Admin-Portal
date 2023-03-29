@@ -55,13 +55,16 @@ import { StudentsComponent } from './students/students.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSortModule } from '@angular/material/sort';
 import { FormsModule } from '@angular/forms';
+import { ViewStudentComponent } from './students/view-student/view-student.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopNavComponent,
     // The following component is added.
-    StudentsComponent
+    StudentsComponent,
+    // Declaration added.
+    ViewStudentComponent
   ],
   imports: [
     FormsModule,

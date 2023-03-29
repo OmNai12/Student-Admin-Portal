@@ -58,15 +58,17 @@
                 <td mat-cell *matCellDef="let element"> {{element.gender.description}} </td>
             </ng-container>
 
-            <!-- Edit Column  
+            <!-- Edit Column   -->
             <ng-container matColumnDef="edit">
-                <th mat-header-cell *matHeaderCellDef> </th>
+                <th mat-header-cell *matHeaderCellDef> Edit </th>
                 <td mat-cell *matCellDef="let element">
                     <a [routerLink]="['/students', element.id]">
                         <mat-icon color="primary">edit</mat-icon>
                     </a>
-                </td> -->
-            <!-- </ng-container> -->
+                </td>
+                <!-- Created the links between the pages -->
+                <!-- By clicking the pencil icon it will be re directed to the targeted student's profile -->
+            </ng-container>
 
 
 
