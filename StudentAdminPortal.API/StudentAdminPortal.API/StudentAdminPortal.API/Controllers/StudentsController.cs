@@ -37,7 +37,7 @@ namespace StudentAdminPortal.API.Controllers
 
         // [Route("[controller]/{studentId:guid}"), ActionName("GetStudentAsync")] <----- This was there.
         [HttpGet]
-        [Route("[controller]/{studentId:guid}")]
+        [Route("[controller]/{studentId:guid}"), ActionName("GetStudentAsync")]
         public async Task<IActionResult> GetStudentAsync([FromRoute] Guid studentId)
         {
             // Fetch Student Details

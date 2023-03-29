@@ -18,12 +18,12 @@ export class StudentService {
   getStudents(): Observable<Student[]> {
     // return this.httpClient.get<any>(this.baseApiUrl + '/students');
     // Before student there is no ned of the forward slash.
-    return this.httpClient.get<Student[]>(this.baseApiUrl + 'Students');
+    return this.httpClient.get<Student[]>(this.baseApiUrl + 'students');
   }
 
   getStudent(studentId: string): Observable<Student> {
-    // To return the single student data.
-    return this.httpClient.get<Student>(this.baseApiUrl + '/students/' + studentId)
+    // To return the single student data
+    return this.httpClient.get<Student>(this.baseApiUrl + 'students/' + studentId)
   }
 
 }

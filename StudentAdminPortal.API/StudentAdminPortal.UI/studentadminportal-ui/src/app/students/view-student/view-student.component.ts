@@ -54,7 +54,7 @@ export class ViewStudentComponent implements OnInit {
               (successResponse) => {
                 // Targeting the student.
                 this.student = successResponse;
-                console.log(successResponse)
+                // console.log(successResponse)
               }
             );
         }
