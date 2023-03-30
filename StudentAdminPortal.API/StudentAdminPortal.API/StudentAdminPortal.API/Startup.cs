@@ -38,7 +38,7 @@ namespace StudentAdminPortal.API
 
             services.AddControllers();
             services.AddDbContext<StudentAdminContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("StudentAdminPortalDb")));
+                options.UseSqlServer(Configuration.GetConnectionString("StudentAdminPortalDb"), options => { options.CommandTimeout(200); }));
 
             services.AddScoped<IStudentRepository, SqlStudentRepository>();
 

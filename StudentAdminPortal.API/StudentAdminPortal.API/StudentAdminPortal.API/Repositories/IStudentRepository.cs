@@ -10,13 +10,18 @@ namespace StudentAdminPortal.API.Repositories
     {
         Task<List<Student>> GetStudentsAsync();
         Task<Student> GetStudentAsync(Guid studentId);
+
+        //This gender will be the data model, not domain model.
+        Task<List<Gender>> GetGendersAsync();
+
+        // To check if the student exists or not.
+        Task<bool> Exists(Guid studentId);
+
+        // To delete the student.
+        Task<Student> UpdateStudent(Guid studentId, Student request);
     }
 }
 
-//Task<Student> GetStudentAsync(Guid studentId);
-//Task<List<Gender>> GetGendersAsync();
-//Task<bool> Exists(Guid studentId);
-//Task<Student> UpdateStudent(Guid studentId, Student request);
 //Task<Student> DeleteStudent(Guid studentId);
 //Task<Student> AddStudent(Student request);
 //Task<bool> UpdateProfileImage(Guid studentId, string profileImageUrl);
