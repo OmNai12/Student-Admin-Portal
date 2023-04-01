@@ -17,11 +17,14 @@ namespace StudentAdminPortal.API.Repositories
         // To check if the student exists or not.
         Task<bool> Exists(Guid studentId);
 
-        // To delete the student.
+        // To Update the student.
         Task<Student> UpdateStudent(Guid studentId, Student request);
+        // To delete student.
+        Task<Student> DeleteStudent(Guid studentId);
+
+        // To delete student.
+        Task<Student> AddStudent(Student request);
     }
 }
 
-//Task<Student> DeleteStudent(Guid studentId);
-//Task<Student> AddStudent(Student request);
 //Task<bool> UpdateProfileImage(Guid studentId, string profileImageUrl);
